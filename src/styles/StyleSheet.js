@@ -6,6 +6,7 @@ export const colors = {
 
   textFieldBackground: "#F8F8F8",
   textPrimaryDrak: "#ffffff",
+  textPrimaryDrak1: "#2D3142",
   textPrimarySecondary: "#9C9EB9"
 };
 

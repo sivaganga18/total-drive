@@ -6,7 +6,7 @@ import OTPTextView from "react-native-otp-textinput";
 
 export default class LoginLayout extends Component {
   render() {
-    const { callback } = this.props;
+    const { callback, pupilCallback } = this.props;
     return (
       <View style={{ flex: 1 }}>
         <View
@@ -32,6 +32,7 @@ export default class LoginLayout extends Component {
               rightMargin={true}
               smallRadius={true}
               buttonTitle="Pupil"
+              callback={pupilCallback}
             />
             <Button
               smallButton={true}

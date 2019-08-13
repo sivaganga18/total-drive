@@ -11,6 +11,9 @@ export default class Login extends Component {
       <View style={{ flex: 1, backgroundColor: colors.drakBlue }}>
         <CustomStatusBar />
         <LoginLayout
+          pupilCallback={() => {
+            Actions.pupils();
+          }}
           callback={() => {
             Actions.instructor();
           }}

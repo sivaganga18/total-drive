@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Scene, Router } from "react-native-router-flux";
 import Login from "./src/components/Scenes/Login";
 import Instructor from "./src/components/Scenes/Instructor";
+import Pupils from "./src/components/Scenes/Pupils";
 
 export default class App extends Component {
   render() {
@@ -20,6 +21,13 @@ export default class App extends Component {
             hideNavBar={true}
             component={Instructor}
             title="Instructor"
+            panHandlers={null}
+          />
+          <Scene
+            key="pupils"
+            hideNavBar={true}
+            component={Pupils}
+            title="Pupils"
             panHandlers={null}
           />
         </Scene>
