@@ -11,12 +11,13 @@ export default class Button extends Component {
       storkeButton,
       rightMargin,
       callback,
-      xSmallButton
+      xSmallButton,
+      disable
     } = this.props;
     return (
       <TouchableOpacity
         activeOpacity={1}
-        onPress={callback}
+        onPress={disable ? null : callback}
         style={{
           width: smallButton ? 120 : xSmallButton ? 100 : 180,
           height: xSmallButton ? 30 : 50,
@@ -26,7 +27,8 @@ export default class Button extends Component {
           justifyContent: "center",
           alignItems: "center",
           borderWidth: 2.5,
-          borderColor: colors.lightGreen
+          borderColor: colors.lightGreen,
+          opacity: disable ? 0.5 : 1
         }}
       >
         <Text

@@ -6,6 +6,13 @@ import Button from "../../Common/Button";
 
 export default class InstructorLayout extends Component {
   render() {
+    const {
+      userNameOnChangeText,
+      passwordOnChangeText,
+      userNameError,
+      passwordError,
+      buttonDisable
+    } = this.props;
     return (
       <View style={{ flex: 1 }}>
         <View style={{ paddingTop: 86, alignItems: "center" }}>
@@ -14,11 +21,21 @@ export default class InstructorLayout extends Component {
           </Text>
         </View>
         <View style={{ padding: 26 }}>
-          <CustomTextField placeholder={"Username"} />
-          <CustomTextField placeholder={"Password"} />
+          <CustomTextField
+            placeholder={"Username"}
+            onChangeText={userNameOnChangeText}
+            error={userNameError}
+            errorMessage="Requried Field"
+          />
+          <CustomTextField
+            placeholder={"Password"}
+            onChangeText={passwordOnChangeText}
+            error={passwordError}
+            errorMessage="Requried Field"
+          />
         </View>
         <View style={{ alignItems: "center" }}>
-          <Button buttonTitle="Login" />
+          <Button buttonTitle="Login" disable={buttonDisable} />
         </View>
         <View
           style={{

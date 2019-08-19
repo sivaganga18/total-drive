@@ -11,7 +11,8 @@ export default class AppHeader extends Component {
       title,
       subTitle,
       leftIcon,
-      showRightButton
+      showRightButton,
+      rightButtonCallback
     } = this.props;
     return (
       <View>
@@ -65,7 +66,11 @@ export default class AppHeader extends Component {
             </View>
             <View style={{ paddingRight: 16 }}>
               {showRightButton ? (
-                <Button buttonTitle="Add Pupil" xSmallButton={true} />
+                <Button
+                  buttonTitle="Add Pupil"
+                  xSmallButton={true}
+                  callback={rightButtonCallback}
+                />
               ) : (
                 <View />
               )}

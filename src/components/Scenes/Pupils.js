@@ -42,6 +42,9 @@ export default class Pupils extends Component {
           leftIconCallback={() => {
             Actions.pop();
           }}
+          rightButtonCallback={() => {
+            alert("asdasd");
+          }}
         />
         <View style={{ flex: 1 }}>
           {this.state.activeTab == 1 ? (

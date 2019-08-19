@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Dimensions } from "react-native";
 import { colors, typography } from "../../../styles/StyleSheet";
 import Button from "../../Common/Button";
 import OTPTextView from "react-native-otp-textinput";
+
+const width = Dimensions.get("window").width;
 
 export default class LoginLayout extends Component {
   render() {
@@ -14,7 +16,7 @@ export default class LoginLayout extends Component {
             flex: 0.3,
             alignItems: "center",
             justifyContent: "center",
-            marginTop: 56
+            marginTop: width / 4
           }}
         >
           <Text
